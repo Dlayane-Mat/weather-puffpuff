@@ -63,4 +63,4 @@ searchCity(searchFormInput.value);
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", getCity);
 
-searchCity("Mokopane");
+searchCity("South africa");
