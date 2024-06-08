@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -24,18 +25,24 @@
           <h1 class="city" id="city">
             South africa
           </h1>
-          <div class="temperature">
-            <div class="temperature-icon" id="temperature-icon">
-              <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png">
-              <div class="temperature-value" id="temperature-value">16</div>
-              <span class="temperature-unit" id="temperature></span>
-           <div class="date" id="date">
-            <div class="current-date" id="current-date">Monday 00:04</div>
-            <br>
-            <span id="humidity">Humidity :<strong class="strong">90%</strong></span>
-            <span id="windspeed">Windspeed :<strong class="strong">6.43km/h</strong></span>
-            <br>
-            <div id="weather-description">Moderate rain</div>
+    <div class="temperature-components">
+      <div class="temperature-icon" id="temperature-icon">
+           <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png">
+        </div>
+            <span class="temperature-value" id="temperature-value">16</span>
+            <div class="date" id="date">
+             <br> 
+            <span class="current-date" id="time">Monday 00:04</span>
+            </div>
+    </div>
+    <div class="weather-components">
+            <br><br>
+            <span>Humidity :<strong class="strong" id="current-humidity"></strong></span>
+            <span>Windspeed :<strong class="strong" id="current-windspeed"></strong></span> 
+       </div>
+           <div class="description">
+            <span id="weather-description"></span>
+           </div>
             <hr>
             <div class="weather-forecast" id="forecast">
               <div class="forecast" id="forecast">
@@ -93,20 +100,17 @@
         </div>
       </div>
      </div>
-            </div>
-          </div>
-
-        </div>
     </main>
     <hr>
     <footer>
       <p>
         This project was coded by
-        <a href="#" target="_blank">Matjila Dlayane</a> and is
-        <a href="#" target="_blank"> on GitHub</a> and
-        <a href="#" target="_blank">hosted on Netlify</a>
+        <a href="" target="_blank">Matjila Dlayane</a> and is
+        <a href="" target="_blank"> on GitHub</a> and
+        <a href="" target="_blank">hosted on Netlify</a>
       </p>
     </footer>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

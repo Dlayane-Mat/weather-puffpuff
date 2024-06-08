@@ -6,7 +6,7 @@ body{
   }
   .weather-container{
  background-image: linear-gradient(to bottom right,#5FFBF1, #86A8E7, #D16BA5);
-max-width: 750px;
+max-width: 650px;
   margin: 70px auto;
   padding: 16px;
   border-radius: 13px;
