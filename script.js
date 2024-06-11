@@ -59,8 +59,30 @@ function getCity(event){
 searchCity(searchFormInput.value);
 }
 
+function displayForecast(){
+    let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+    let forecastHtml = "";
+
+    days.forEach(function (day) {
+        forecastHtml = forecastHtml + `<div class="weather-forecast" id="forecast">
+        <div class="forecast" id="forecast">
+          <div id="forecast-day">Sat</div>
+            <div id="forecast-icon"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/snow-night.png" width="30px">
+              <div id="forecast-temp">
+            <span id="max-temp">16°</span> /
+            <span id="min-temp">9°</span>
+              </div>
+        </div>
+      </div>
+     </div>`;
+    });
+
+    let forecastElement = document.querySelector("#forecast");
+    forecastElement.innerHTML = forecastHtml;
+}
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", getCity);
 
 searchCity("South africa");
+displayForecast();
