@@ -19,7 +19,7 @@ descriptionElement.innerHTML = response.data.condition.description;
 humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
  temperatureElement.innerHTML =`${Math.round(temperature)}°C`;
     
-    
+  getForecast(response.data.city);  
 }
 function formatDate(date) {
     let minutes = date.getMinutes();
@@ -59,7 +59,16 @@ function getCity(event){
 searchCity(searchFormInput.value);
 }
 
-function displayForecast(){
+function getForecast (city){
+    let apiKey ="0bd4693b39a661e4b0370fe772t7a9o3";
+    let apiUrl =`https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&unit=metric`;
+    axios(apiUrl).then(displayForecast);
+}
+
+
+function displayForecast(response){
+    console.log(response.data);
+
     let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
     let forecastHtml = "";
 
@@ -85,4 +94,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", getCity);
 
 searchCity("South africa");
-displayForecast();
